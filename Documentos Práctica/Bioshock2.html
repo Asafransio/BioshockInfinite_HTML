@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="js/jquery.min.js"></script>
+<style>
+body {
+background-color: #eee;
+	}
+div.relativa {
+  position: relative;
+  width: 80%;
+  margin:0px auto;
+	}
+.uno {
+  opacity: 0%;
+}
+.uno:hover {
+  opacity: 100%;
+}
+.dos {
+  opacity: 0%;
+}
+.dos:hover {
+  opacity: 100%;
+}
+.tres {
+  opacity: 0%;
+}
+.tres:hover {
+  opacity: 100%;
+}
+.cuatro {
+  opacity: 0%;
+}
+.cuatro:hover {
+  opacity: 100%;
+}
+.cinco {
+  opacity: 0%;
+}
+.cinco:hover {
+  opacity: 100%;
+}
+
+	
+#mimenu2 {
+  position: absolute;
+  clear: left;
+   top:205px;
+  left:274px;  
+  list-style-type: none;
+  z-index:99;
+  }
+ 
+
+#mimenu {
+  position: absolute;
+  top:205px;
+  left:274px;  
+  list-style-type: none;
+  z-index:99;
+  opacity: 0%;
+  animation-name: example;
+  animation-duration: 304s;
+  animation-delay: 1.35s;
+  }
+
+  @keyframes example {
+    0%{opacity: 0}
+    0.2%{opacity: 100%}
+    100%{opacity: 100%}
+  }
+
+
+
+#mimenu li { 
+position: relative;
+}
+#mimenu li a {
+ display: block;
+ text-decoration: none;
+}
+#mimenu2 li { 
+position: relative;
+}
+#mimenu2 li a {
+ display: block;
+ }
+#mimenu li a:hover {
+color: #eee;
+	}
+
+#mimenu .micontenido {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left: -1000px; 
+width: 300px;
+padding-bottom: 50px;
+}
+#mimenu .micontenidodos {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 300px;
+}	
+#mimenu .micontenidotres {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 300px;
+}	
+#mimenu .micontenidocuatro {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 300px;
+}	
+#mimenu .micontenidocinco { 
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 300px;
+}	
+#mimenu2 .micontenido {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left: -1000px; 
+width: 300px;
+padding-bottom: 50px;
+}
+#mimenu2 .micontenidodos {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 300px;
+} 
+#mimenu2 .micontenidotres {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 300px;
+} 
+#mimenu2 .micontenidocuatro {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 300px;
+} 
+#mimenu2 .micontenidocinco { 
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 300px;
+} 
+
+
+
+#mimenu li:hover .micontenido {
+  /* como el contenido tiene una posición absoluta, lo "traemos" desde afuera y lo ponemos en su lugar */
+left: 50px;
+top: 345px;
+}	
+#mimenu li:hover .micontenidodos {
+  /* como el contenido tiene una posición absoluta, lo "traemos" desde afuera y lo ponemos en su lugar */
+left: 50px;
+top: 310px;
+}	
+#mimenu li:hover .micontenidotres {
+  /* como el contenido tiene una posición absoluta, lo "traemos" desde afuera y lo ponemos en su lugar */
+left: 50px;
+top: 260px;
+}
+	
+#mimenu li:hover .micontenidocuatro {
+  /* como el contenido tiene una posición absoluta, lo "traemos" desde afuera y lo ponemos en su lugar */
+left: 50px;
+top: 210px;
+}	
+#mimenu li:hover .micontenidocinco {
+  /* como el contenido tiene una posición absoluta, lo "traemos" desde afuera y lo ponemos en su lugar */
+left: 50px;
+top: 160px;
+}	
+
+</style>
+</head>
+<body>
+<div class="relativa">
+<video autoplay loop muted src="Video/vbioshock/BioShock_Infinite2.mp4" width="80%" height="80%">
+</video>
+<audio controls autoplay id="sonido">
+<source src="Audio/sBioshock/song.mp3">
+</audio>
+
+<ul id="mimenu">  
+<li>
+<img src="Images/ibioshock/juegoprincipal2.png" width="267px"/>
+<div class="micontenido"> 
+</div>  
+</li> 
+
+<li>
+<img src="Images/ibioshock/opciones2.png"width="267px"/>
+<div class="micontenidodos"> 
+</div>  
+</li> 
+
+<li>
+<img src="Images/ibioshock/descargadecontenido2.png"width="267px"/>
+<div class="micontenidotres">
+</div>  
+</li> 
+
+<li>
+<img src="Images/ibioshock/creditos2.png"width="267px"/>
+<div class="micontenidocuatro">
+
+</div>  
+</li> 
+<li>
+<img src="Images/ibioshock/salirdeljuego2.png"width="267px"/>
+</li>
+</ul>
+
+
+
+
+
+
+
+<ul id="mimenu2">	
+<li>
+<a class="primera" href="positionVideo3.html" ><img class="uno" src="Images/ibioshock/juegoprincipal.png" width="267px" /></a>
+<div class="micontenido"> 
+</div>	
+</li>	
+
+<li>
+<a href="#" ><img class="dos" src="Images/ibioshock/opciones.png"width="267px"/></a>
+<div class="micontenidodos"> 
+</div>	
+</li>	
+
+<li>
+<a href="#" ><img class="tres" src="Images/ibioshock/descargadecontenido.png"width="267px"/></a>
+<div class="micontenidotres">
+</div>	
+</li>	
+
+<li>
+<a href="#" ><img class="cuatro" src="Images/ibioshock/creditos.png"width="267px"/></a>
+<div class="micontenidocuatro">
+
+</div>	
+</li>	
+<li>
+<a class="salir" href="Bioshock1.html"><img class="cinco" src="Images/ibioshock/salirdeljuego.png"width="267px"/></a>
+</li>
+</ul>
+
+
+
+<script>
+	var beep = $("#sonido")[0];
+	$("#mimenu li a").mouseenter(function() {
+		beep.play();
+});
+</script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			background-color: #eee;
+			overflow: hidden;
+		}
+	
+		iframe{
+			position: absolute;
+			width: 1360px;
+			height: 920px;
+		}
+		.botoncicos {
+			position: fixed; 
+			top: 800px;
+			left: 1340px;
+		}
+		button{
+			border:none;
+			outline: none;
+		}
+		button#playpausebtn{ position: right 
+			background:url(Images/play.png)no-repeat;
+			width: 14px;
+			height: 14px;
+			border:0px solid #000;
+		}
+		button#mutebtn {
+			background:url(Images/speaker.png)no-repeat;
+			width: 14px;
+			height: 14px;
+		}
+
+
+	</style>
+
+
+
+
+	
+	
+<script type="text/javascript">	
+var audio;
+var playbtn;
+var mutebtn;
+var cambiando;
+	
+function initAudioPlayer(){
+	audio = new Audio();
+	audio.src = "Audio/video_menu.mp3";
+	audio.loop = true;
+	audio.play();
+	// Set object references
+	playbtn = document.getElementById("playpausebtn");
+	mutebtn = document.getElementById("mutebtn");
+	// Add Event Handling
+	playbtn.addEventListener("click",playPause);
+	mutebtn.addEventListener("click",mute);
+	
+	// Functions
+	function playPause(){
+		if(audio.paused){
+		    audio.play();
+		    playbtn.style.background = "url(Images/pause.png) no-repeat";
+	    } else {
+		    audio.pause();
+		    playbtn.style.background = "url(Images/play.png) no-repeat";
+	    }
+	}
+	function mute(){
+		if(audio.muted){
+		    audio.muted = false;
+		    mutebtn.style.background = "url(Images/speaker.png) no-repeat";
+	    } else {
+		    audio.muted = true;
+		    mutebtn.style.background = "url(Images/speaker_muted.png) no-repeat";
+	    }
+	}
+}
+window.addEventListener("load", initAudioPlayer);
+</script>
+
+
+
+
+</head>
+<body>
+	
+<iframe src="positionVideo.html" frameborder="0" scrolling="no"></iframe>
+<div class="botoncicos">
+<button id="playpausebtn"></button>
+<button id="mutebtn"></button>
+</div>
+
+</body>
+</html>

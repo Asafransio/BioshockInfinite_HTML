@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="js/jquery.min.js"></script>
+<style>
+body {
+background-color: #eee;
+	}
+div.relativa {
+  position: relative;
+  width: 80%;
+  margin:0px auto;
+	}
+.lado {
+  position:absolute;
+  top:0px;
+  left:0px;
+  overflow:hidden;
+  filter:brightness(150%);
+	} 
+	
+#encima {
+  top:80%;
+  left:10%;
+  z-index:1;
+  position:absolute;
+  width:93px;
+  height:62px;
+  animation-name: example;
+  animation-duration: 10s;		
+	}
+	@keyframes example {
+    0%   {opacity: 0}
+    25%  {opacity: 25%}
+    50%  {opacity: 50%}
+    75%  {opacity: 75%}
+    100% {opacity:100%}
+	}
+#mimenu {
+  position: absolute;
+  top:80px;
+  left:60px;  
+  line-height: 50px;
+  list-style-type: none;
+  z-index:99;   
+  }
+#mimenu li { 
+position: relative;
+}
+#mimenu li a {
+ display: block;
+ text-decoration: none;
+ color: #908c8c;
+ font-family:"Arial", Sans-serif;
+ font-size: 20px;
+ font-weight:400;
+ -webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: #555;
+}
+#mimenu li a:hover {
+color: #eee;
+margin-left:38px;
+	}
+#mimenu .micontenido {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 500px;
+padding: 5px;
+color:#555;
+font-family:"Arial", Sans-serif;
+font-size: 16px;
+font-weight: lighter;
+}
+#mimenu .micontenidodos {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 500px;
+padding: 5px;
+color:#555;
+font-family:"Arial", Sans-serif;
+font-size: 16px;
+font-weight: lighter;  
+}	
+#mimenu .micontenidotres {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 500px; 
+padding: 5px;
+color:#555;
+font-family:"Arial", Sans-serif;
+font-size: 16px;
+font-weight: lighter;
+}	
+#mimenu .micontenidocuatro {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 500px; 
+padding: 5px;
+color:#555;
+font-family:"Arial", Sans-serif;
+font-size: 16px;
+font-weight: lighter;
+}	
+#mimenu .micontenidocinco {
+  /* al contenedor LI se le colocó position: relative así que a el contenido le ponemos position: absolute; para "moverlo" */
+position: absolute;
+left:-1000px; 
+width: 500px; 
+padding: 5px;
+color:#555;
+font-family:"Arial", Sans-serif;
+font-size: 16px;
+font-weight: lighter;
+}	
+#mimenu li:hover .micontenido {
+  /* como el contenido tiene una posición absoluta, lo "traemos" desde afuera y lo ponemos en su lugar */
+left: 50px;
+top: 345px;
+}	
+#mimenu li:hover .micontenidodos {
+  /* como el contenido tiene una posición absoluta, lo "traemos" desde afuera y lo ponemos en su lugar */
+left: 50px;
+top: 310px;
+}	
+#mimenu li:hover .micontenidotres {
+  /* como el contenido tiene una posición absoluta, lo "traemos" desde afuera y lo ponemos en su lugar */
+left: 50px;
+top: 260px;
+}
+	
+#mimenu li:hover .micontenidocuatro {
+  /* como el contenido tiene una posición absoluta, lo "traemos" desde afuera y lo ponemos en su lugar */
+left: 50px;
+top: 210px;
+}	
+#mimenu li:hover .micontenidocinco {
+  /* como el contenido tiene una posición absoluta, lo "traemos" desde afuera y lo ponemos en su lugar */
+left: 50px;
+top: 160px;
+}	
+a.primera {
+margin: 0px 0px -15px 0px;
+	}
+</style>
+</head>
+<body>
+<div class="relativa">
+
+
+<img style="position:absolute; top:0px; left:6px;" width="37.5%" src="Images/imago_menu.jpg" alt="imagen"/>
+
+<a href="positionVideo.html" target="_self"><img src="ImageButton/boton2.png" id="encima" alt="Imagen volver"/></a>
+<video autoplay loop muted src="Video/video_menu_R.mp4" width="100%">
+</video>
+<audio id="sonido" preload="auto">
+<source src="Audio/beeep.mp3">
+</audio>
+
+<ul id="mimenu">	
+<li>
+<a class="primera" href="positionVideo3.html">THE LAST OF US </a>
+<div class="micontenido">
+Play the main story of The Last of Us.
+</div>	
+</li>	
+
+<li>
+<a href="#" >LEFT BEHIND</a>
+<div class="micontenidodos">
+Play the story of Ellie. The beginning of the adventure.
+</div>	
+</li>	
+
+<li>
+<a href="#" >FACTIONS MP</a>
+<div class="micontenidotres">
+Online multiplayer mode.
+</div>	
+</li>	
+
+<li>
+<a href="#" >OPTIONS</a>
+<div class="micontenidocuatro">
+Choose your special features.
+</div>	
+</li>	
+
+<li>
+<a href="#" >DOWNLOADABLES</a>
+<div class="micontenidocinco">
+Exclusively from the Sony Entertainment Store.
+</div>	
+</li>
+</ul>
+<script>
+	var beep = $("#sonido")[0];
+	$("#mimenu li a").mouseenter(function() {
+		beep.play();
+});
+</script>
+
+</div>
+</body>
+</html>

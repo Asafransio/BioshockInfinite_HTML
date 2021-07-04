@@ -1,0 +1,19 @@
+HOLA!
+
+En el trabajo he hecho el menú de Bioshock Infinite. Me ha costado la vida hacerlo ;(
+así que espero que haya estado a la altura. Lo primero decir que el juego de Bioshock
+infinite tiene que estar en un zoom de 100.
+
+
+Tienes Bioshock1.html y Bioshock2.html. He omitido el "Todo" por decision propia de 
+quitar los botones y poner un reproductor en su lugar.
+En el de The Last of Us puede estar un poco desordenado porque lo he intentado miles de 
+veces hasta entenderlo.
+
+
+Tras realizar el menú de The Last of Us, he cambiado un par de cosas en el de Bioshock.
+He omitido los botones porque siempre me daban fallos de que algunas veces desaparecían
+y otras iban perfectos (influia con el buscador con el que lo iniciara).
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	<img {
+		position: absolute;
+		top:0px;
+		left: 6px;
+		width: 37.5%;
+		overflow: hidden;
+		filter: brightness(150%);
+	}
+	<img.lado {
+		position: relative;
+		top: 12px;
+		left: 14px;
+		width: 37.5%;
+		overflow: hidden;
+		filter: brightness(150%);
+	}
+
+	#encima {
+		z-index: 1;
+		position: absolute;
+		top: 600px;
+		left: 180px;
+		width: 200px;
+		height: 54px;
+		animation-name: example;
+		animation-duration: 30s;
+	}
+	@keyframes example {
+		0%{opacity: 0}
+		25%{opacity: 25%}
+		50%{opacity: 50%}
+		75%{opacity: 75%}
+		100%{opacity: 100%}
+	}
+	div.relativa{
+		position: relative;
+		width: 80%
+		margin:0px auto;}
+	</style>
+
+</head>
+<body>
+	<div class="relativa">
+	<video autoplay loop muted src="video/video_menu_R.mp4" width="100%" height="100%"></video>
+	<a href="positionVideo2.html" target="_self">
+	<img style="position:absolute; top:0px; left:6px;" width="37.5%" src="Images/imago_menu.jpg" alt="imagen"/>
+	<img src="ImageButton/boton1.png" id="encima" alt="boton empezar"> </a>
+</div>
+
+
+</body>
+</html>
